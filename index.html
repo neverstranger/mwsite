@@ -1,14 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Aromatherapy blends, pain blends, fibromyalgia treatment, massage therapy oils, essential oil blends, and more">
+
 
 <head>
-  <title>MW Therapy</title>
+	<title>Aromatherapy by Massage Works</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css\main.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+	<script src="./js/seasonal.js"></script>
+	<script src="./js/getaromaoils.js"></script>
+	<script src="./js/getmassageoils.js"></script>
+	<script src="./js/loadapi.js"></script>
+
 </head>
 
 <body>
+	<div id="tabs">
+		<nav class="navbar">
+			<h2 class="navbar-icon">M<span>W</span></h2>
+			<ul class="nav-items" id="navItems">
+				<li><a class="nav-link active" href="#homePage">Home</a></li>
+				<li><a class="nav-link" href="#aromaPage"> Aromatherapy</a></li>
+				<li><a class="nav-link" href="#msgPage"> Massage</a> </li>
+				<li><a class="nav-link" href="#contactPage">Contact</a></li>
+			</ul>
 
-  <h1>Thanks for your patience during construction!</h1>
-   <p>Content is on its way.</p>
+		</nav>
 
+		<section class="hero">
+
+			<div class="content-info" id="homePage">
+				<h1>Welcome</h1>
+				<h2>Aromatherapy and Massage Oil Blends</h2>
+				<p>
+					Aromatherapy and Massage blends, brought to you by Massage Works
+				</p>
+			</div>
+
+			<div class="list-info" id="aromaPage">
+				<table id="aromaOils" class="table">
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+						<th>Precautions</th>
+					</tr>
+				</table>
+
+			</div>
+			<div class="list-info" id="msgPage">
+				<table id="msgOils" class="table">
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+						<th>Precautions</th>
+					</tr>
+				</table>
+
+			</div>
+
+			<div class="content-info" id="contactPage">
+				<h1>Email</h1>
+				<h2>faye 'at' mwtherapy.ca</h2>
+			</div>
+
+		</section>
+	</div> <!-- End of tabs div	 -->
+	
+
+	<script>
+		$(function () {
+			$("#tabs").tabs();
+		});
+	</script>
+
+	<footer>
+		Professional Association member information
+	</footer>
 </body>
+
 </html>

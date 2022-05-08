@@ -1,0 +1,107 @@
+
+/* Later will dynamically alter values in the JavaScript version */
+:root { 
+    --seasonal-image-small: url(../images/mobilewinter.jpeg);
+    --seasonal-image-large: url(../images/winter.jpeg);
+    --dark-colour: rgb(37, 44, 52);
+    --light-colour:rgb(198, 211, 224);
+    --accent-dk: rgb(88, 115, 158);
+    --accent-lt:rgb(157, 196, 230);
+  
+  }
+  
+  body {
+   background-color: var(--dark-colour);
+   background-image: var(--seasonal-image-large); 
+   background-size: cover;
+   background-repeat: no-repeat;
+   height: 100vh;
+   margin:0;
+   overflow-x: hidden;
+   font-family: Helvetica， sans-serif;
+    }
+  
+  /* These four sections take care of formatting and bullets on links and lists */
+    a {
+      color:var(--light-colour);
+      text-decoration: none; 
+       }
+    a:hover {font-style:bold;}
+  
+    a:active {color: var(--accent-dk);}
+  
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+     }
+
+     .content-info{
+         padding: 2em;
+         
+        background: rgba(198, 211, 224, .7);
+        color: var(--dark-colour);
+     }
+
+     .list-info{
+        background: rgba(198, 211, 224, .7);
+        color: var(--dark-colour);
+     }
+  
+     .flex{
+      display:internal;
+      gap: var(--gap, 1rem)
+    }
+ 
+     /*Navigation */
+ 
+     .navbar {
+       display: flex;
+       background-color: Var(--accent-dk);
+       height: 8rem;
+       z-index: 1800;
+       }
+       
+     .navbar-icon {
+         color: var(--accent-lt);
+       }
+ 
+     .navbar-icon .span {
+         font-size: 1.5em;
+         color: var(--accent-lt);
+       }
+ 
+     .nav-items {
+        columns: 3;
+         width: 100%;
+         height: 10vh;
+        
+         background-color: var(--accent-dk);
+         padding: 3 rem;
+         display:fixed
+        ;
+         z-index: 2001;
+       }
+  
+   /* mobile-first responsive media query, this section is for big screens */
+  
+  @media screen and (min-width: 768px) {
+    .hamburger {
+        display: none;
+      }
+  
+    .nav-items {
+      background-color: transparent;
+      display:flex;
+      flex-direction: row;
+      padding: 1rem;
+      
+    }
+    .nav-link {
+      display:block;
+      margin-left: 4rem;
+      font-size: 1.6rem;
+    }
+
+}
+    
